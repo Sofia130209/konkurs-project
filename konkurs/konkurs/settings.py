@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "users.apps.UsersConfig",
+    "myapp.apps.MyappConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -117,5 +118,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
-# ! LOGIN_REDIRECT_URL = "myapp:item" - ссылка, куда будет переходить пользователь после входа в аккаунт
+LOGIN_REDIRECT_URL = "myapp:index"  # ! - ссылка, куда будет переходить пользователь после входа в аккаунт
 LOGIN_URL = "users:login"  # ! ссылка для входа в аккаунт
